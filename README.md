@@ -32,34 +32,37 @@ Hardware – PCs, Cyclone II , USB flasher
 
 
 **Program:**
-F(A,B,C,D)=AB+CD+AD
 
-```module boolean_function_4var (
-    input  wire A,
-    input  wire B,
-    input  wire C,
-    input  wire D,
-    output wire F
-);
-
-assign F = (~A & B) | (C & D) | (A & ~D);
-
+i)
+module funct1(a,b,c,d,f1);
+input a,b,c,d;
+output f1;
+assign f1=((~b & ~d)|(~a & b & d)|(a & b & ~c));
 endmodule
-```
-/* Program to implement the given logic function and to verify its operations in quartus using Verilog programming. 
-
-Developed by:magesh s RegisterNumber:25014866
 
 
-**RTL realization**
-![WhatsApp Image 2025-11-22 at 14 50 14_1bd5e836](https://github.com/user-attachments/assets/19cdbf9d-aeea-40c7-967f-ca6e3dbba08d)
+ii)
+module funct2(w,x,y,z,f2);
+input w,x,y,z;
+output f2;
+assign f2=((~y & z)|( w & y )|(x & y));
+endmodule
+
+Developed by:magesh s 
+RegisterNumber:25014866
 
 **Output:**
 
 **RTL**
-![WhatsApp Image 2025-11-22 at 14 48 27_b9fbcd34](https://github.com/user-attachments/assets/c0c0f5bb-8117-405d-895f-2a68c46e22cb)
+<img width="1036" height="557" alt="Screenshot 2025-12-15 083845" src="https://github.com/user-attachments/assets/e74043ea-8f12-4694-b341-7cf9f0e45ce8" />
+
+<img width="1035" height="552" alt="Screenshot 2025-12-15 083915" src="https://github.com/user-attachments/assets/ce1c3c29-0a25-4cfd-86ee-1a67f84e1c65" />
 
 **Timing Diagram**
+
+<img width="1037" height="522" alt="Screenshot 2025-12-15 084005" src="https://github.com/user-attachments/assets/a8221110-7e9c-4979-87e4-df3da373073b" />
+
+<img width="1034" height="526" alt="Screenshot 2025-12-15 084033" src="https://github.com/user-attachments/assets/a619ed4b-16bf-4517-9911-76a975610888" />
 
 **Result:**
 
